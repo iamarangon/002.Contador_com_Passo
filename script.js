@@ -19,6 +19,11 @@ function contar() {
         let i = Number(init.value)
         let f = Number(fim.value)
         let p = Number(passo.value)
+        
+        if (p <= 0) {
+            window.alert('Passo inválido. Passo considerado p=1')
+            p=1
+        }
 
         if (i < f) {
             for (let c = i; c <= f; c += p) {
